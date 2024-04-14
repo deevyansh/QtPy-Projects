@@ -21,7 +21,7 @@ from PyQt6.QtWidgets import QApplication, QWidget, QLineEdit, QPushButton, QText
 class MyApp(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle('MKC.Gui')
+        self.setWindowTitle('Hello.Gui')
         self.resize(400,400)
 
         # Setting the layout
@@ -31,7 +31,7 @@ class MyApp(QWidget):
         # Adding the Widget
         self.Inputfield=QLineEdit()
         self.output=QTextEdit()
-        button=QPushButton('Say MKC')
+        button=QPushButton('Say Hello')
         button.clicked.connect(self.sayHello)
 
         # Adding the Widget to the layout
@@ -41,7 +41,7 @@ class MyApp(QWidget):
 
     def sayHello(self):
         inputtext =self.Inputfield.text()
-        self.output.setText(f'MKC {inputtext}')
+        self.output.setText(f'Hello {inputtext}')
 
 
 
